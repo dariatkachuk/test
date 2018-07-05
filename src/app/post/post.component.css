@@ -1,0 +1,123 @@
+.posts {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+.posts li {
+    width: 23%;
+    margin-right: 1%;
+    margin-bottom: 1%;
+}
+mat-card-header {
+    padding-top: 10px;
+}
+.example-header-image img {
+    width: 40px;
+    border-radius: 50%;
+}
+.mat-card-header-text {
+    margin: 0 15px;
+}
+.mat-card-avatar {
+    margin-left: 15px;
+}
+.mat-card-image:first-child {
+    margin-top: 0;
+}
+mat-card-content {
+    padding-left: 15px;
+}
+.mat-card-actions {
+    margin: 0;
+    padding: 10px;
+}
+.mat-card>.mat-card-actions:last-child {
+    margin-bottom: 0;
+    padding-bottom: 10px;
+}
+.posts mat-card-title {
+    font-weight: bold;
+}
+.posts mat-card-subtitle {
+    color: #4889F8;
+}
+.posts mat-card-content {
+    display: flex;
+}
+.stat-elem {
+    width: 50%;
+}
+.stat-elem p {
+    color: #A4A4A4;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+.stat-elem span {
+    font-size: 2em;
+    font-weight: bold;
+}
+mat-card-actions button {
+    text-transform: uppercase;
+}
+.approve-button {
+    color: #4889F8;
+}
+.hover-img {
+    position: relative;
+}
+.hover-img img {
+    height: 300px;;
+}
+.hover-img .post-caption:before {
+    position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 300px;;
+	background: linear-gradient(to top, rgba(23, 25, 31, 0) 0%, rgba(31, 31, 39, 0.8) 75%);
+	content: '';
+	opacity: 0;
+	transform: translate3d(0,0,5%);
+}
+.post-caption p {
+	position: absolute;
+	top: 0;
+	left: 0;
+    width: 90%;
+    color: white;
+    text-transform: uppercase;
+    padding: 0 10px 0 10px;
+	opacity: 0;
+    transform: translate3d(0,5px,0);
+    right: 0;
+}
+.post-caption:before, 
+.post-caption p {
+    transition: opacity 0.35s, transform 0.35s;
+}
+.hover-img:hover .post-caption:before, 
+.hover-img:hover .post-caption p {
+    opacity: 1;
+    transform: translate3d(0,0,0);
+}
+mat-card {
+    padding: 0;
+    margin-bottom: 20px;
+}
+.hover-img img {
+    width: 100%;
+}
+.mat-card-image {
+    margin: 0;
+}
+.add-info {
+    margin: 5px 40px;
+    font-size: 0.8em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+mat-paginator {
+    margin-right: 25px;
+}

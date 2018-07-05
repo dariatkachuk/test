@@ -1,0 +1,75 @@
+ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+ul li {
+    width: 23%;
+    margin-right: 1%;
+    margin-bottom: 1%;
+    border-top: 4px solid black;
+}
+mat-card {
+    background-color: 	#F9F9F9;
+}
+mat-card-content {
+    display: flex;
+    flex-wrap: wrap;
+}
+.stat-elem {
+    width: 50%;
+}
+.stat-elem p {
+    color: #A4A4A4;
+    text-transform: uppercase;
+    font-size: 0.8em;
+}
+
+.stat-elem span {
+    color:#000;
+    text-transform: uppercase;
+    font-size: 1.7em;
+    font-weight: bold;
+}
+.stat-detail {
+    font-size: 0.7em;
+    color: #A4A4A4;
+}
+mat-card-actions {
+    border-top: 3px solid #1DBAA1;
+    margin-top: 5px;
+    margin-left: -24px;
+    margin-right: -24px;
+    display: flex;
+    justify-content: space-between;
+}
+mat-card-actions button:first-child {
+    margin-left: 5px;
+}
+.show-button, .hide-button {
+    text-transform: uppercase;
+}
+.show-button {
+    color: 	#80BFEE;
+}
+.show-more {
+    border: none;
+    background-color: transparent;
+    width: 23%;
+    text-transform: uppercase;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #989898;
+}
+.show-more:focus {
+    outline: none;
+}
+.show-more:hover {
+    cursor: pointer;
+}
+.show-more p {
+    font-size: 0.5em;
+    font-weight: normal;
+    margin: 5px;
+}

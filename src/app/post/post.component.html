@@ -1,0 +1,49 @@
+<div class="add-info">
+  <p>{{posts.length}} items total</p>
+  <mat-paginator [length]="100"
+              [pageSize]="8"
+              [pageSizeOptions]="[5, 10, 25, 100]">
+  </mat-paginator>
+</div>
+<ul class="posts">
+    <li *ngFor="let post of posts">
+      <div>
+        <mat-card>
+            <mat-card-header>
+                <div mat-card-avatar class="example-header-image">
+                    <img mat-card-image src={{post.author_pic}}>
+                </div>
+                <mat-card-title>{{post.author_username}}</mat-card-title>
+                <mat-card-subtitle>{{post.social_network}}</mat-card-subtitle>
+            </mat-card-header>
+            
+            <a href={{post.link}}>
+              <div class="hover-img">
+                  <div><img class="post-img" mat-card-image src={{post.pic}}></div>
+                <div class="post-caption"><p>{{post.caption}}></p></div>
+              </div>
+            </a>
+            
+            <mat-card-content>
+              
+                <div class="stat-elem">
+                    <p>Likes</p>
+                    <span>{{post.likes_number}}</span>
+                </div>
+                <div class="stat-elem">
+                    <p>Comments</p>
+                    <span>{{post.comments_number}}</span>
+                </div>
+
+            </mat-card-content>
+            <mat-divider></mat-divider>
+            <mat-card-actions>
+                    <button mat-button *ngIf="post.state!='Rejected'" (click)="toReject(post)">Reject</button>
+                    <button mat-button *ngIf="post.state!='Approved'" class="approve-button" (click)="toApprove(post)">Approve</button>
+            </mat-card-actions>
+
+        </mat-card>
+        </div>
+    </li>
+    
+</ul>

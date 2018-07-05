@@ -1,0 +1,33 @@
+<div *ngIf="campaign">
+
+    <h2>{{campaign.name}}</h2>
+    <div class="container">
+        <mat-button-toggle-group name="social-network" aria-label="Social Network">
+            <mat-button-toggle value="instagram">Instagram</mat-button-toggle>
+            <mat-button-toggle value="youtube">YouTube</mat-button-toggle>
+            <mat-button-toggle value="Facebook">Facebook</mat-button-toggle>
+            <mat-button-toggle value="Twitter">Twitter</mat-button-toggle>
+          </mat-button-toggle-group>
+      <mat-tab-group>
+        <mat-tab label="Pending">
+          <div class="flex-cont">
+            <app-keyword-chips></app-keyword-chips>
+            <div class="button-wrap"><button mat-button>Filter</button></div>
+          </div>
+          <div class="posts-wrap">
+              <app-post></app-post>
+          </div>
+        </mat-tab>
+        <mat-tab label="Approved">
+           <div class="posts-wrap">
+              <app-post></app-post>
+          </div>
+        </mat-tab>
+        <mat-tab label="Rejected"> 
+            <div class="posts-wrap">
+                <app-post></app-post>
+            </div>
+        </mat-tab>
+      </mat-tab-group>
+    </div>
+  </div>

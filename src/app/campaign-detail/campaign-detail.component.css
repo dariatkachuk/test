@@ -1,0 +1,59 @@
+app-keyword-chips {
+    width: 100%;
+    margin-left: 15px;
+}
+.container {
+    margin: 10px;
+    background-color: #FCFCFC;
+    box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+}
+h2 {
+    font-family: Roboto,"Helvetica Neue",sans-serif;
+    background-color: #FCFCFC;
+    margin: 10px;
+    padding: 15px;
+    box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+}
+.flex-cont {
+    display: flex;
+}
+.button-wrap {
+    display: flex;
+    align-self: center;
+}
+.button-wrap button {
+    margin-right: 15px;
+    background-color: #4889F8;
+    color: #fff;
+    text-transform: uppercase;
+}
+::ng-deep .mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar {
+    background-color: #4889F8;
+}
+
+::ng-deep .mat-tab-label-active .mat-tab-label-content {
+    color: #4889F8;
+}
+.posts-wrap {
+    background-color: #F7F7F7;
+    padding-top: 20px;
+}
+mat-button-toggle-group {
+    margin: 20px 0 30px 40px;
+}
+mat-button-toggle {
+    border-right: 1px solid rgba(0,0,0,.38);
+    color: rgba(0,0,0,.87);
+    font-weight: bold;
+    font-size: 0.9em;
+}
+mat-button-toggle:last-child {
+    border-right: none;
+}
+::ng-deep .mat-button-toggle-button .mat-button-toggle-label-content {
+    text-transform: uppercase !important;
+}
+.mat-button-toggle-checked {
+    background-color: #4889F8;
+    color: #fff;
+}

@@ -1,0 +1,39 @@
+<ul class="campaigns">
+        <li *ngFor="let campaign of campaigns|slice:0:show; let i=index" [class.selected]="campaign === selectedCampaign" [hidden]="campaign.hideme" style.borderColor = "{{campaign.type == 'Influencer campaign' ? '#5CA3CC' : 'Giveaway' ? '#7684C4' : '#B568C2'}}">
+
+            <mat-card>
+                <mat-card-title>{{campaign.name}}</mat-card-title>
+                <mat-card-subtitle>{{campaign.type}}</mat-card-subtitle>
+                <mat-divider></mat-divider>
+                <mat-card-content>
+
+                    <div class="stat-elem">
+                        <p>Approved posts</p>
+                        <span>{{campaign.approved_posts}}</span>
+                    </div>
+                    <div class="stat-elem">
+                        <p>Likes</p>
+                        <span>{{campaign.approved_likes}}</span>
+                    </div>
+                    <div class="stat-elem">
+                        <p>Influencers</p>
+                        <span>{{campaign.num_of_artists}}</span>
+                    </div>
+                    <div class="stat-elem">
+                        <p>Comments</p>
+                        <span>{{campaign.approved_comments}}</span>
+                    </div>
+                </mat-card-content>
+                    <span class="stat-detail">{{campaign.progress}}%</span>
+                    <span class="stat-detail">({{campaign.days_passed}}/{{campaign.days_total}} days)</span>
+                
+                <mat-card-actions>
+                        <button mat-button (click)="campaign.hideme=!campaign.hideme" class="hide-button">Hide</button>
+                        <button mat-button routerLink="/campaigns/{{campaign.id}}" class="show-button">Show details</button>
+                </mat-card-actions>
+
+            </mat-card>
+
+        </li>
+        <button class="show-more" *ngIf="show <= 7" (click)="show = campaigns.length" >+{{campaigns.length - show}}<p>More to Show</p></button>
+</ul>

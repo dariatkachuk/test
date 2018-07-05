@@ -1,0 +1,15 @@
+.keyword-chip-list {
+    width: 50%;
+}
+mat-chip-list input {
+    display: inline-block;
+}
+.material-icons {
+    font-size: 0.9em;
+    line-height: 0.9em;
+}
+
+::ng-deep .mat-form-field-underline {
+    display: none;
+}
+
